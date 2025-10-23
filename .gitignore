@@ -1,0 +1,101 @@
+# testingtesting repository .gitignore
+# Goal: ignore non-Python and non-SQL files (data, notebooks, binaries, builds, IDE artifacts)
+
+# --- Keep Python and SQL files tracked ---
+# We do not ignore *.py or *.sql files; do not add patterns that would exclude them.
+
+# --- Jupyter / notebooks ---
+*.ipynb
+*.ipynb_checkpoints/
+
+# --- Data files (common large data formats) ---
+*.csv
+*.tsv
+*.jsonl
+*.ndjson
+*.parquet
+*.feather
+*.avro
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.sqlite3
+
+# Exclude large raw exports or test fixtures that are typically not source
+data/
+datasets/
+raw_data/
+
+# --- Images / media ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# --- Compressed files / archives ---
+*.zip
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.7z
+
+# --- Node / front-end artifacts ---
+node_modules/
+dist/
+build/
+*.min.js
+*.map
+
+# --- Python virtual envs / caches ---
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- IDE / Editor files ---
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs and runtime ---
+*.log
+logs/
+tmp/
+temp/
+
+# --- Build artifacts ---
+*.class
+*.o
+*.so
+
+# --- Gradle / Java (since repo contains some Java subprojects) ---
+/.gradle/
+**/build/
+!/**/src/**
+
+# --- Jupyter checkpoint or other notebook artifacts ---
+*.ipynb_checkpoints
+
+# --- Coverage and test artifacts ---
+.pytest_cache/
+.coverage
+coverage.xml
+
+# --- Allow list (examples) ---
+# If you have directories like 'sql/' or 'scripts/' with non-ignored files, ensure they are not matched by the patterns above.
