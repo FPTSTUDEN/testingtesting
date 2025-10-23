@@ -4,6 +4,9 @@
 # --- Keep Python and SQL files tracked ---
 # We do not ignore *.py or *.sql files; do not add patterns that would exclude them.
 
+# --- Empty file extension ---
+*.
+
 # --- Jupyter / notebooks ---
 *.ipynb
 *.ipynb_checkpoints/
