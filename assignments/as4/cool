@@ -1,0 +1,4 @@
+for _ in range(N):
+    x,y=random.uniform(-R,R),random.uniform(-R,R)
+    if x**2+y**2<=R**2: inside+=1
+print(f"Approximation of pi: {4*inside/N}")
