@@ -1,0 +1,52 @@
+body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
+        }
+.header {
+    display: flex;
+    justify-content: space-between; /* spread logo and nav links */
+    padding: 10px 40px; /* padding: top+bot, left+right */
+    background-color: #ffffffa4;
+}
+.site-logo {
+    background-color: #a0a0a0; /* Grey block for logo */
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none; /* Remove underline from links */
+    color: #333;
+    font-weight: bold;
+}
+.hero-section {
+    background-color: #e8e8e8; /* Light grey area for the background design */
+    padding: 100px 80px;
+    text-align: center;
+    /* Placeholder for the abstract background shapes */
+    /* background-image: radial-gradient(circle at 10% 20%, #c42424 0%, #2087d5 70%); */
+}
+.company-title {
+    font-size: 4em; /*em -> relative to the font size of the parent */
+    color: #333333;
+    margin-bottom: 50px;
+}
+.image-placeholder {
+    background-color: #333333; /* Dark grey block for the main image */
+    color: white;
+    padding: 150px 0;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+    z-index: 3;
+}
+.content-section {
+    padding: 40px 10%; /* % for left and right to be responsive */
+    text-align: center;
+    line-height: 1.6;
+    color: black;
+}

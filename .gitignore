@@ -31,9 +31,9 @@ datasets/
 raw_data/
 
 # --- Images / media ---
-*.png
-*.jpg
-*.jpeg
+# *.png
+# *.jpg
+# *.jpeg
 *.gif
 *.svg
 *.ico
