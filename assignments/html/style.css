@@ -22,10 +22,8 @@ body {
 }
 .hero-section {
     background-color: #e8e8e8; /* Light grey area for the background design */
-    padding: 100px 80px;
+    padding: 80px 80px;
     text-align: center;
-    /* Placeholder for the abstract background shapes */
-    /* background-image: radial-gradient(circle at 10% 20%, #c42424 0%, #2087d5 70%); */
 }
 .company-title {
     font-size: 4em; /*em -> relative to the font size of the parent */
@@ -33,20 +31,32 @@ body {
     margin-bottom: 50px;
 }
 .image-placeholder {
-    background-color: #333333; /* Dark grey block for the main image */
-    color: white;
-    padding: 150px 0;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 900px;
-    text-align: center;
-    font-size: 2em;
-    position: relative;
-    z-index: 3;
+    background-color: #333333;
+    display: flex;
+    align-items: center; /* center the text vertically */
+    padding: 10px 20px; /* padding around the text */
+    justify-content: center; /* center the text horizontally */
+    /* color: white; */
 }
 .content-section {
     padding: 40px 10%; /* % for left and right to be responsive */
     text-align: center;
     line-height: 1.6;
     color: black;
+}
+.product-list {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+.product-item {
+    flex: 1;
+    background-color: lightgray;
+    padding: 20px;
+}
+.contact-section {
+    display: flex;
+    background-color: #e8e8e8; /* Light grey area for the background design */
+    padding: 100px 80px;
+    gap: 20px;
 }
