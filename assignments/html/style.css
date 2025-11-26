@@ -21,7 +21,7 @@ body {
     font-weight: bold;
 }
 .hero-section {
-    background-color: #91b37e; /* Light grey area for the background design */
+    background-color: rgb(211, 202, 162); /* Light grey area for the background design */
     padding: 80px 80px;
     text-align: center;
 }
@@ -51,7 +51,7 @@ body {
 }
 .product-item {
     flex: 1;
-    background-color: rgb(211, 202, 162);
+    background-color: rgb(236, 228, 199);
     padding: 20px;
 }
 .contact-section {
