@@ -60,3 +60,22 @@ body {
     padding: 100px 80px;
     gap: 20px;
 }
+/* NEW STYLES ADDED BELOW */
+.article :nth-of-type(odd) {
+    background-color: rgb(236, 228, 199);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.message {
+    position: relative;
+    /* relative to element before it */
+    bottom: 20px;
+    box-sizing: border-box;
+    /* include padding and border of the element 
+    in its total width and height */
+}
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }    
+}
