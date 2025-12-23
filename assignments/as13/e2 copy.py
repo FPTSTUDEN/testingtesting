@@ -1,34 +1,31 @@
 # http://127.0.0.1:5000/airport/EFHK
 # {"ICAO":"EFHK", "Name":"Helsinki-Vantaa Airport", "Location":"Helsinki"}
-#中文版
 import mysql.connector
 from flask import Flask, jsonify
-from flask_cors import CORS
 app = Flask(__name__)
-CORS(app)
-
-def 得到数据库连接():
-    连接 = mysql.connector.connect(
+def get_db_connection():
+    connection = mysql.connector.connect(
         host='localhost',
         user='root',
         password='password',
         database='flight_game'
     )
-    return 连接
+    return connection
 @app.route('/airport/<icao>', methods=['GET'])
 def get_airport(icao):
-    连接 = 得到数据库连接()
-    游标 = 连接.cursor(dictionary=True)
-    查询 = "SELECT ident, name, municipality FROM airport WHERE ident=%s"
-    游标.execute(查询, (icao,))
-    空港 = 游标.fetchone()
-    游标.close()
+    connection = get_db_connection()
+    cursor = connection.cursor(dictionary=True)
+    query = "SELECT ident, name, municipality FROM airport WHERE ident=%s"
+    cursor.execute(query, (icao,))
+    airport = cursor.fetchone()
+    cursor.close()
+    connection.close()
 
-    if 空港:
+    if airport:
         return jsonify({
-            'ICAO': 空港['ident'],
-            'Name': 空港['name'],
-            'Location': 空港['municipality']
+            'ICAO': airport['ident'],
+            'Name': airport['name'],
+            'Location': airport['municipality']
         })
     else:
         return jsonify({'error': 'Airport not found'}), 404
