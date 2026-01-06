@@ -8,7 +8,9 @@
 
 // When the form is submitted...
 const airportForm = document.querySelector('#airport-form')
-airportForm.addEventListener('submit', async function(evt) {
+airportForm.addEventListener('submit', async function(evt) { 
+    //async: function contains await, runs on a separate thread that won't block the main program
+    //evt: event object
     // ... prevent the default action.
     evt.preventDefault();
     // get value of input element
